@@ -537,7 +537,7 @@ describe('AES', () => {
         asmCrypto.hex_to_bytes('0126141d67f37be8538f5a8be740e484'),
       ],
     ];
-    
+
     it('asmCrypto.AES_OFB.encrypt / asmCrypto.AES_OFB.decrypt', () => {
       for (let i = 0; i < ofb_vectors.length; ++i) {
         const key = new Uint8Array(ofb_vectors[i][0]);
@@ -575,7 +575,7 @@ describe('AES', () => {
         asmCrypto.hex_to_bytes('51f0bebf7e3b9d92fc49741779363cfe'),
       ],
     ];
-    
+
     it('asmCrypto.AES_CMAC', function() {
       for (let i = 0; i < cmac_vectors.length; ++i) {
         const key = new Uint8Array(cmac_vectors[i][0]);

@@ -31,9 +31,9 @@ export class AES_CMAC {
 
   process(data: Uint8Array): this {
     if (this.bufferLength + data.length > 16) {
-      this.cbc.encrypt(this.buffer.subarray(0, this.bufferLength));
+      this.cbc.AES_Encrypt_process(this.buffer.subarray(0, this.bufferLength));
       const offset = ((this.bufferLength + data.length - 1) & ~15) - this.bufferLength;
-      this.cbc.encrypt(data.subarray(0, offset));
+      this.cbc.AES_Encrypt_process(data.subarray(0, offset));
       this.buffer.set(data.subarray(offset));
       this.bufferLength = data.length - offset;
     } else {
