@@ -37,7 +37,7 @@ export abstract class AES {
   }
 
   protected release_asm() {
-    heap_pool.push(this.heap));
+    heap_pool.push(this.heap);
     asm_pool.push(this.asm);
     this.heap = undefined;
     this.asm = undefined;
